@@ -1,39 +1,37 @@
-document.addEventListener('DOMContentLoaded', function(){
-    ScrollNav();
+document.addEventListener('DOMContentLoaded', function() {
+    scrollNav();
 
-    NavegacionFija();
+    navegacionFija();
 });
 
-function NavegacionFija(){
+function navegacionFija() {
 
     const barra = document.querySelector('.header');
 
-    //Registrar el Intersection observer
-    const observer = new IntersectionObserver(function(entries){
-        if(entries[0].isIntersecting){
-            barra.classList.remove('fijo')
-           
-        }else{
-           barra.classList.add('fijo')
+    // Registrar el Intersection Observer
+    const observer = new IntersectionObserver( function(entries) {
+        if(entries[0].isIntersecting) {
+            barra.classList.remove('fijo');
+        } else {
+            barra.classList.add('fijo');
         }
     });
 
-    //Elemento a observar
+    // Elemento a observar
     observer.observe(document.querySelector('.sobre-festival'));
 }
 
-function ScrollNav(){
-    const enlaces = document.querySelectorAll('.navegacion-princial a');
-   
-    enlaces.forEach( function( enlace ){
-        enlace.addEventListener('click', function(e){
+function scrollNav() {
+    const enlaces = document.querySelectorAll('.navegacion-principal a');
+
+    enlaces.forEach( function( enlace ) {
+        enlace.addEventListener('click', function(e) {
             e.preventDefault();
             const seccion = document.querySelector(e.target.attributes.href.value);
+
             seccion.scrollIntoView({
-                behavior: 'smooth',
+                behavior: 'smooth'
             });
-         });
-     });
-    console.log(enlaces);
-    
+        });
+    });
 }

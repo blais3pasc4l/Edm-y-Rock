@@ -1,31 +1,33 @@
-.lineup{
+.lineup {
     background-color: $rosa;
     padding: $separacion 0;
 
-    h3, p{
+    h3, p {
         text-align: center;
         color: $blanco;
     }
-    .dia{
+    .dia {
         text-transform: uppercase;
         margin: $separacion 0;
     }
-   
+
 }
 
-.escenarios-contenedor{
-    @include tablet{
+.escenarios-contenedor {
+    @include tablet {
         @include grid(2, $separacion);
     }
-    .escenario{
+
+    .escenario {
         padding-top: $separacion / 2;
     }
 
-    .nombre-escenario{
+    .nombre-escenario {
         color: $negro;
         font-size: 2rem;
         font-weight: $delgada;
-        &::after{
+
+        &:after {
             content: '';
             width: 20rem;
             height: 10rem;
@@ -34,38 +36,39 @@
             background-size: 15rem;
             background-repeat: no-repeat;
             background-position: center center;
-
         }
     }
 }
 
-.edm .nombre-escenario{
-    &:after{
-        background-image: url(/build/img/icono_edm.png);
-    } 
-}
-.rock .nombre-escenario{
-    &:after{
-        background-image: url(/build/img/icono_rock.png);
-    } 
+.edm .nombre-escenario {
+    &:after {
+        background-image: url(../img/icono_edm.png);
+    }
 }
 
-.calendario{
+.rock .nombre-escenario {
+    &:after {
+        background-image: url(../img/icono_rock.png);
+    }
+}
+
+.calendario {
     padding: 0;
     list-style: none;
-    li{
+    li {
         padding: $separacion / 2;
         font-weight: $bold;
-    }
-    span{
-        font-weight: $regular;
+        span {
+            font-weight: $regular;
+        }
     }
 }
 
-.bg-verde .calendario li:nth-child(2n+1){
-    background-color: darken($color: $verde, $amount: 10);
+
+.bg-verde .calendario li:nth-child(odd) {
+    background-color: darken($verde, 10);
 }
 
-.bg-amarillo .calendario li:nth-child(2n+1){
-    background-color: darken($color: $amarillo, $amount: 10);
+.bg-amarillo .calendario li:nth-child(odd) {
+    background-color: darken($amarillo, 10);
 }

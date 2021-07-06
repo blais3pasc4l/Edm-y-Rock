@@ -1,10 +1,10 @@
-.boletos{
+.boletos {
     padding: $separacion 0;
-    
-    h3{
+    h3 {
         text-align: center;
         color: $blanco;
     }
+
     .contenedor-boletos {
         margin-top: $separacion / 2;
         @include grid(2, $separacion);
@@ -18,15 +18,14 @@
             margin-bottom: 2rem;
         }
     }
-         
 }
 
-.pase{
+.pase {
     width: 100%;
     border-spacing: 0;
-    thead{
+    thead {
         background-color: $rosa;
-        th{
+        th {
             padding: $separacion / 4;
             color: $blanco;
             text-transform: uppercase;
@@ -34,23 +33,26 @@
             font-size: 2rem;
         }
     }
-    tbody{
+    tbody {
         background-color: $blanco;
-        td{
-            padding: $separacion /4;
+
+        td {
+            padding: $separacion / 4;
             border-bottom: 1px solid #e1e1e1;
         }
-        tr{
-            &:last-of-type{
-                td{
-                    border: none;
+
+        tr {
+            &:last-of-type {
+                td {
+                    border:none;
                 }
             }
         }
     }
-    tfoot{
+    tfoot {
         background-color: $morado;
-        td{
+
+        td {
             padding: $separacion / 4;
             text-align: center;
             font-size: 3rem;
